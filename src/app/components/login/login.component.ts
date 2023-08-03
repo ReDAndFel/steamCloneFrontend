@@ -15,6 +15,6 @@ export class LoginComponent {
   }
 
   public login(){
-    console.log(this.login);
+    console.log(this.loginDTO);
   }
 }
