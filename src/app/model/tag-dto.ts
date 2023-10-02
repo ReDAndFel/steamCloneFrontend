@@ -1,4 +1,9 @@
 export class TagDTO {
     id:number = 0;
-    name:string = "";    
+    name:string = ""; 
+    
+    constructor(id:number, name:string){
+        this.id = id;
+        this.name = name;
+    }
 }

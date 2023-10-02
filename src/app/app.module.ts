@@ -18,6 +18,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import {FormsModule} from "@angular/forms";
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { FooterNavComponent } from './components/footer-nav/footer-nav.component';
+import { GameComponent } from './components/game/game.component';
 
 
 
@@ -38,7 +39,8 @@ import { FooterNavComponent } from './components/footer-nav/footer-nav.component
     DownloadManagementComponent,
     ChatComponent,
     HeaderNavComponent,
-    FooterNavComponent
+    FooterNavComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,

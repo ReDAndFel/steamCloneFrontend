@@ -1,1 +1,28 @@
-<p>add-product works!</p>
+<form #f = "ngForm" (ngSubmit)="createGame()">
+    <div>
+        <label>Nombre: </label>
+        <input type="text" name="name" [(ngModel)]="game.name" required />
+    </div>
+
+    <div>
+        <label>Release date: </label>
+        <input type="date" name="realeaseDate" [(ngModel)]="game.releaseDate" required />
+    </div>
+
+    <div>
+        <label>Seleccione los tags:</label>
+        <label *ngFor="let tag of tags;index as i"> <input type="checkbox" [value]="tag" [name] = "tag.name" [(ngModel)]="game.tags[i]" (change)="onCheckTagChange($event)">{{tag.name}}</label>        
+    </div>    
+
+    <div>
+        <label>Seleccione los lenguajes:</label>
+        <label *ngFor="let language of languages; index as i"> <input type="checkbox" (change)="onCheckLanguageChange($event)" [name]="language" [value]="language" [(ngModel)]="game.languages[i]"> {{language}} </label>        
+    </div> 
+
+    <div>
+        <label >Imagen: </label>
+        <input type="file" (change)="onFileChange($event)" multiple />
+    </div>
+    
+    <button type="submit">Crear nuevo producto</button>
+</form>

@@ -13,6 +13,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {AddProductComponent} from "./components/add-product/add-product.component";
 import {DownloadManagementComponent} from "./components/download-management/download-management.component";
 import {ChatComponent} from "./components/chat/chat.component";
+import { GameComponent } from './components/game/game.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
   { path: "add_product", component: AddProductComponent },
   { path: "download_management", component: DownloadManagementComponent },
   { path: "chat", component: ChatComponent },
-
+  {path: "game/:id", component: GameComponent},
 
   { path: "**", pathMatch: "full", redirectTo: "" }
 ];
